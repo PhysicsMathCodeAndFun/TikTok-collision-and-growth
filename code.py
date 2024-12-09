@@ -12,14 +12,14 @@ pygame.display.set_caption('physics, math, code & fun')
 
 pygame.mixer.init()
 beep = pygame.mixer.Sound("beep.mp3")
-font = pygame.font.SysFont('Arial', 50)
+font = pygame.font.SysFont('Arial', 30)
 
 
 class Particles:
     def __init__(self, x, y):
-        self.rect =  pygame.Rect(x, y, 10, 10)
+        self.rect =  pygame.Rect(x, y, 20, 20)
         self.visible = True
-        self.color = [30,random.randint(100, 255),30]
+        self.color = [30,255,30]
     def draw(self, screen):
         if self.visible:
             pygame.draw.rect(screen, self.color, self.rect)
